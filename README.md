@@ -38,13 +38,13 @@ npm run dev
 
 There is a search bar in the main route and some instructions.
 
-Please read instruction and follow the examples
+Please read instruction and follow the examples.
 
 ## ✨ Testing 
 
 Shutdown the server and type the following command.
 
-type `ctrl + c` to shutdown the server
+type `ctrl + c` to shutdown the server.
 
 ```sh
 npm run test
