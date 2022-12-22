@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Image Processing API</title>
+</head>
+<style>
+    body {
+        background-color: rgb(27, 27, 27);
+        color: #fff;
+    }
+    h1{
+        text-align: center;
+        text-shadow:1px 1px  crimson;
+        letter-spacing: 2px;
+    }
+    section {
+        height: 97vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    input {
+        padding: 20px;
+        width: 50%;
+        color: crimson;
+        border-radius: 30px 0 0 30px;
+        border: 3px solid crimson;
+        border-right: #fff;
+        outline: none;
+        font-size: 18px;
+        font-weight: 600;
+        box-shadow: 2px 0 5px #ccc;
+    }
+
+    ::placeholder {
+        color: rgb(206, 104, 125);
+
+    }
+
+    button {
+        background-color: crimson;
+        color: #fff;
+        width: 110px;
+        font-weight: 300;
+        border-radius: 0 30px 30px 0;
+        border: 3px solid crimson;
+        font-size: 18px;
+        letter-spacing: 3px;
+        cursor: pointer;
+        box-shadow: 2px 0 5px #ccc;
+    }
+
+    .instructions {
+        width: 60%;
+        flex-direction: column;
+    }
+
+    h2 {
+        color: crimson;
+        padding: 0;
+        letter-spacing: 1.7px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 40px;
+        font-size: 18px;
+        letter-spacing: 1.7px;
+    }
+
+    code {
+        font-family: Consolas, "courier new";
+        color: crimson;
+        background-color: #f1f1f1;
+        padding: 2px;
+        
+    }
+</style>
+
+<body>
+   
+    <section class="landing">
+        <h1>Image Processing API</h1>
+        <div>
+            <input type="url" id="imageUrl" placeholder="Enter Image URL" required />
+            <button onclick="search()">RESIZE</button>
+        </div>
+        <div class="instructions">
+            <h2>
+                Instructions
+            </h2>
+
+            <ul>
+                <li>
+                    Type <code>image</code> to route to <code>localhost:3000/image</code> The path of images
+                </li>
+                <li>
+                    Type the queries using <code>?</code>
+                </li>
+                <li>
+                    After <code>?</code> add the filename which is mandatory ex: <code>filename=fjord</code>
+                </li>
+                <li>
+                    After <code>filename</code> add <code>&</code> then you can add width or height or both ex: <code>width=200&height=300</code>
+                </li>
+                <li>
+                    Full Example: <code>/image?filename=fjord&width=300&height=300</code>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <script>
+    let btn = document.getElementsByTagName('button')
+        function search() {
+            let url = document.getElementById('imageUrl').value;
+            
+            window.location.href = url;
+        }
+        document.getElementById('imageUrl').addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
+});
+
+    </script>
+</body>
+
+</html>
