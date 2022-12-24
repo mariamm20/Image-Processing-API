@@ -12,7 +12,7 @@ This is a simple dynamic website which has the following specs.
 
 - HTML 
 - CSS 
-- JavaScript
+- TypeScript
 
 ### Back-End
 
