@@ -20,7 +20,7 @@
     "build": "npm clean && npx tsc",
     "start": "npm run build && nodemon build/index.js",
     "prettier": "prettier --config .prettierrc --write src/**/*.ts ",
-    "lint": "eslint  'src/**/*.ts'  "
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts ."
   },
   "keywords": [],
   "author": "",
